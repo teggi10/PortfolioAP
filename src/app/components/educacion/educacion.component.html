@@ -1,0 +1,98 @@
+ <!-- ======= Resume Section ======= -->
+ <section id="resume" class="page-section">
+    <div class="container text-center text-secondary" >
+         <!-- Portfolio Section Heading-->
+         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Educacion</h2>
+         <!-- Icon Divider-->
+         <div class="divider-custom">
+             <div class="divider-custom-line"></div>
+             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+             <div class="divider-custom-line"></div>
+         </div>
+      <div class="row">
+        <div class="col">
+          <div class="resume-item pb-0">
+            <p class="lead"><em>Programador capaz de diseñar y entender algoritmos buscando siempre la maxima optimizacion de complejidad en ellos. Poseo conocimientos basicos de varios lenguajes por lo cual ofrezo una adaptabilidad a diveros proyectos.</em></p>
+            <button class="btn btn-dark float-start" *ngIf="isAdmin" routerLink="/crear-educacion">Agregar</button>
+          </div>
+          <div class="resume-item" *ngFor="let educacion of educaciones">
+            <button routerLink="/editar-educacion/{{educacion.id}}" class="btn btn-secpndary float-end ml-5 mt-5" *ngIf="isAdmin"><i class="far fa-edit fa-2x text-dark"   ></i></button>
+            <button *ngIf="isAdmin" (click)="eliminarEducacion(educacion.id)" class="btn btn-secpndary float-end ml-5 mt-5"><i class="fas fa-trash fa-2x text-danger" ></i></button> 
+            <hr>
+            <h4 class="text-uppercase mb-4">{{educacion.nombre}} </h4>
+            <h5>{{educacion.fecha}}</h5>
+            <p class="lead"><em>{{educacion.institucion}}</em></p>
+            <p class="lead">{{educacion.informacion}}</p>
+          </div>
+        </div>
+      </div>
+<hr>
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Habilidades</h2>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-html5"></i>
+              </div>
+              <h4 class="text-uppercase mb-4">HTML</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-css3"></i>           
+                 </div>
+              <h4 class="text-uppercase mb-4">CSS</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-js-square"></i>
+                            </div>
+              <h4 class="text-uppercase mb-4">JavaScript</h4>
+             
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-angular"></i>
+                            </div>
+              <h4 class="text-uppercase mb-4">Angular</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-java"></i>   
+                         </div>
+              <h4 class="text-uppercase mb-4">Java</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <div class="icon">
+                <i class="fab fa-plus fa-3x fa-php"></i>
+              </div>
+              <h4 class="text-uppercase mb-4">PHP</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
